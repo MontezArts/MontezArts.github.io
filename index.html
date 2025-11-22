@@ -2,222 +2,232 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Montez Art Portfolio</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Montez Art Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
-```
+/* Body with dark blue to orange gradient background */
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, #0a0a0a, #050505);
-  color: #ffffff;
+margin: 0;
+font-family: 'Poppins', sans-serif;
+color: #fff;
+background: linear-gradient(135deg, #2f4f7f 0%, #ffa07a 100%);
+overflow-x: hidden;
 }
 
-/* Glowing Headers */
+/* Neon glowing headers */
 h1, h2 {
-  text-shadow: 0 0 8px #00e5ff, 0 0 15px #00e5ff;
-  animation: neonPulse 2s infinite alternate;
+text-shadow: 0 0 8px #00e5ff, 0 0 15px #00e5ff;
+animation: neonPulse 2s infinite alternate;
 }
 
 @keyframes neonPulse {
-  0% { text-shadow: 0 0 8px #00e5ff, 0 0 15px #00e5ff; }
-  100% { text-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff; }
+0% { text-shadow: 0 0 8px #00e5ff, 0 0 15px #00e5ff; }
+100% { text-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff; }
 }
 
+/* Header */
 header {
-  padding: 60px 20px;
-  text-align: center;
-  background: radial-gradient(circle at top, rgba(0,229,255,0.25), transparent 60%);
+padding: 60px 20px;
+text-align: center;
+background: radial-gradient(circle at top, rgba(255,160,122,0.2), transparent 60%);
+position: relative;
+overflow: hidden;
 }
 
 header img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 12px #00e5ff);
-  object-fit: cover;
+width: 140px;
+height: 140px;
+border-radius: 50%;
+margin-bottom: 20px;
+filter: drop-shadow(0 0 12px #00e5ff);
+object-fit: cover;
 }
 
 header h1 {
-  font-size: 3rem;
-  font-weight: 800;
+font-size: 3rem;
+font-weight: 800;
 }
 
 header p {
-  font-size: 1.2rem;
-  opacity: 0.85;
+font-size: 1.2rem;
+opacity: 0.85;
 }
 
+/* Navigation */
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-  background: #0f0f0f;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+display: flex;
+justify-content: center;
+gap: 30px;
+padding: 20px;
+background: rgba(0,0,0,0.3);
+position: sticky;
+top: 0;
+z-index: 10;
 }
 
 nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+color: #ffffff;
+text-decoration: none;
+font-weight: 600;
+transition: 0.3s;
 }
 
 nav a:hover {
-  color: #00e5ff;
-  text-shadow: 0 0 12px #00e5ff;
+color: #ffa07a;
+text-shadow: 0 0 12px #ffa07a;
 }
 
+/* Sections */
 .section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
+padding: 60px 20px;
+max-width: 1100px;
+margin: auto;
+position: relative;
 }
 
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
+/* Dividers */
 .divider {
-  border: 0;
-  height: 2px;
-  background: #00e5ff;
-  margin: 40px 0;
-  box-shadow: 0 0 10px #00e5ff;
+border: 0;
+height: 2px;
+background: #ffa07a;
+margin: 40px 0;
+box-shadow: 0 0 10px #ffa07a;
 }
 
+/* Portfolio gallery */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-top: 20px;
+}
+
+.gallery a {
+perspective: 1000px;
 }
 
 .gallery img {
-  width: 100%;
-  border-radius: 6px;
-  transition: 0.3s;
-  box-shadow: 0 0 6px #00e5ff;
+width: 100%;
+border-radius: 10px;
+transition: transform 0.4s, box-shadow 0.4s;
+box-shadow: 0 0 6px #ffa07a;
 }
 
 .gallery img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px #00e5ff;
+transform: scale(1.05) rotateY(5deg);
+box-shadow: 0 0 25px #ffa07a, 0 0 50px #ffa07a inset;
 }
 
+/* Services */
 .services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin-top: 20px;
 }
 
 .card {
-  padding: 20px;
-  border: 1px solid #00e5ff;
-  border-radius: 8px;
-  background: #0f0f0f;
-  transition: 0.3s;
-  text-align: center;
+padding: 25px;
+border: 1px solid #ffa07a;
+border-radius: 10px;
+background: rgba(15, 15, 15, 0.7);
+text-align: center;
+transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  box-shadow: 0 0 25px #00e5ff;
-  transform: translateY(-5px);
+box-shadow: 0 0 25px #ffa07a, 0 0 50px #ffa07a inset;
+transform: translateY(-5px);
 }
 
+/* Neon Button */
 .neon-button {
-  display: inline-block;
-  padding: 12px 25px;
-  color: #00e5ff;
-  border: 2px solid #00e5ff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 8px #00e5ff;
-  transition: 0.3s;
-  margin-top: 20px;
+display: inline-block;
+padding: 12px 25px;
+color: #ffa07a;
+border: 2px solid #ffa07a;
+border-radius: 6px;
+text-decoration: none;
+font-weight: bold;
+box-shadow: 0 0 8px #ffa07a;
+transition: 0.3s;
+margin-top: 20px;
 }
 
 .neon-button:hover {
-  background: #00e5ff;
-  color: #0a0a0a;
-  box-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff inset;
+background: #ffa07a;
+color: #2f4f7f;
+box-shadow: 0 0 20px #ffa07a, 0 0 40px #ffa07a inset;
 }
 
+/* Footer */
 footer {
-  text-align: center;
-  padding: 30px;
-  opacity: 0.6;
-  font-size: 0.9rem;
+text-align: center;
+padding: 30px;
+opacity: 0.7;
+font-size: 0.9rem;
 }
-```
 
-  </style>
+</style>
 </head>
 <body>
 
-  <header>
-    <img src="profile.jpg" alt="My Photo" />
-    <h1>MONTEZ</h1>
-    <p>Graphic Designer • Illustrator • Anime Character Artist</p>
-  </header>
+<header>
+  <img src="profile.jpg" alt="My Photo" />
+  <h1>MONTEZ</h1>
+  <p>Graphic Designer • Illustrator • Anime Character Artist</p>
+</header>
 
-  <nav>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#services">Services</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section class="section" id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="gallery">
-      <a href="art1.jpg" target="_blank"><img src="art1.jpg" alt="Artwork 1"></a>
-      <a href="art2.jpg" target="_blank"><img src="art2.jpg" alt="Artwork 2"></a>
-      <a href="art3.jpg" target="_blank"><img src="art3.jpg" alt="Artwork 3"></a>
-      <a href="art4.jpg" target="_blank"><img src="art4.jpg" alt="Artwork 4"></a>
-    </div>
-  </section>
+<section class="section" id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="gallery">
+    <a href="art1.jpg" target="_blank"><img src="art1.jpg" alt="Artwork 1"></a>
+    <a href="art2.jpg" target="_blank"><img src="art2.jpg" alt="Artwork 2"></a>
+    <a href="art3.jpg" target="_blank"><img src="art3.jpg" alt="Artwork 3"></a>
+    <a href="art4.jpg" target="_blank"><img src="art4.jpg" alt="Artwork 4"></a>
+  </div>
+</section>
 
-  <hr class="divider">
+<hr class="divider">
 
-  <section class="section" id="services">
-    <h2>Services</h2>
-    <div class="services">
-      <div class="card">Logo Design</div>
-      <div class="card">Anime Character Art</div>
-      <div class="card">Custom Illustrations</div>
-      <div class="card">Branding & Visual Identity</div>
-    </div>
-  </section>
+<section class="section" id="services">
+  <h2>Services</h2>
+  <div class="services">
+    <div class="card">Logo Design</div>
+    <div class="card">Anime Character Art</div>
+    <div class="card">Custom Illustrations</div>
+    <div class="card">Branding & Visual Identity</div>
+  </div>
+</section>
 
-  <hr class="divider">
+<hr class="divider">
 
-  <section class="section" id="about">
-    <h2>About Me</h2>
-    <p>I am Montez, a bold creative artist with experience in graphic design, branding, illustration, and anime-themed character creation. I blend neon aesthetics with dark, strong visuals to create art that stands out.</p>
-  </section>
+<section class="section" id="about">
+  <h2>About Me</h2>
+  <p>I am Montez, a bold creative artist with experience in graphic design, branding, illustration, and anime-themed character creation. I blend neon aesthetics with dark, strong visuals to create art that stands out.</p>
+</section>
 
-  <hr class="divider">
+<hr class="divider">
 
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Email me at:</p>
-    <a href="mailto: kamtochukwuokafor7@gmail.com" class="neon-button">Send Email</a>
-  </section>
+<section class="section" id="contact">
+  <h2>Contact</h2>
+  <p>Email me at:</p>
+  <a href="mailto: kamtochukwuokafor7gmail@.com" class="neon-button">Send Email</a>
+</section>
 
-  <footer>
-    © 2025 Montez Art — All Rights Reserved.
-  </footer>
+<footer>
+  © 2025 Montez Art — All Rights Reserved.
+</footer>
 
 </body>
 </html>
